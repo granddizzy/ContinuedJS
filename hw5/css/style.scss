@@ -6,6 +6,12 @@ html {
 }
 
 body {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  min-height: 2000px;
+}
+
+body {
   background-color: #ebf6fb;
 }
 
@@ -38,14 +44,20 @@ body {
   .ratesContent {
     padding: 5px;
     
-    &__currency {
+    &__id {
+      display: none;
+    }
+    
+    &__line {
       display: flex;
       gap: 20px;
       padding-bottom: 5px;
       padding-top: 5px;
+      cursor: pointer;
+      position: relative;
     }
     
-    &__currency_dark {
+    &__line_dark {
       background-color: whitesmoke;
     }
     
@@ -84,6 +96,23 @@ body {
     
     &__rate {
       width: 60px;
+    }
+  }
+
+  .currencyDynamics {
+    position: absolute;
+    background-color: #FFFFFF;
+    z-index: 99999;
+    padding: 10px;
+    box-shadow: 2px 2px 4px #888888;
+    
+    &__line {
+      display: flex;
+      gap: 20px;
+    }
+    
+    &__line_dark {
+      background-color: whitesmoke;
     }
   }
 }
